@@ -40,19 +40,21 @@ Constraints:
 
 """
 
+# Time complexity: O(N + M)
+# Space complexity: O(N + M)
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        word1_ptr, word2_ptr, merged_str = 0, 0, ""
+        word1_ptr, word2_ptr, merged_chars = 0, 0, []
 
         # Loop until we've reached the end word1 and word2
         while word1_ptr < len(word1) or word2_ptr < len(word2):
         	# If we haven't reached the end of word1, merge the next character & advance the pointer
             if word1_ptr < len(word1):
-                merged_str += word1[word1_ptr]
+                merged_chars.append(word1[word1_ptr])
                 word1_ptr += 1
 
             # If we haven't reached the end of word2, merge the next character & advance the pointer
             if word2_ptr < len(word2):
-                merged_str += word2[word2_ptr]
+                merged_chars.append(word2[word2_ptr])
                 word2_ptr += 1
-        return merged_str
+        return "".join(merged_chars)

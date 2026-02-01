@@ -40,6 +40,8 @@ Constraints:
 
 """
 
+# Time complexity: O(N)
+# Space complexity: O(N)
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         # Initialize the results array, all False to start

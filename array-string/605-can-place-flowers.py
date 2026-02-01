@@ -25,6 +25,8 @@ Constraints:
 
 """
 
+# Time complexity: O(N)
+# Space complexity: O(1)
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
     	# Track the # of remaining flowers left to place

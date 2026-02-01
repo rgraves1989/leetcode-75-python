@@ -33,7 +33,6 @@ Example 3:
 	word2:    p   q 
 	merged: a p b q c   d
  
-
 Constraints:
 
 - 1 <= word1.length, word2.length <= 100

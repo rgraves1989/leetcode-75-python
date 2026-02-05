@@ -32,8 +32,8 @@ Example 3:
 
 Constraints:
 
-1 <= nums.length <= 10^4
--1000 <= nums[i] <= 1000
+	- 1 <= nums.length <= 10^4
+	- -1000 <= nums[i] <= 1000
 
 """
 

@@ -25,11 +25,12 @@ Constraints:
 
 """
 
+
 # Time complexity: O(N)
 # Space complexity: O(1)
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-    	# Find the sum of the first k elements, intialize the max_sum value to this
+        # Find the sum of the first k elements, intialize the max_sum value to this
         window_sum = sum(nums[:k])
         max_sum = window_sum
 
@@ -38,6 +39,6 @@ class Solution:
             window_sum += nums[i]
             window_sum -= nums[i - k]
             max_sum = max(max_sum, window_sum)
-        
+
         # Return the max average
         return max_sum / k

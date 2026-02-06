@@ -26,13 +26,14 @@ Constraints:
 
 """
 
+
 # Time complexity: O(N)
 # Space complexity: O(1)
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
-        prefix_sum, max_alt = 0, float('-inf')
+        prefix_sum, max_alt = 0, float("-inf")
 
-    	# Use prefix_sum to keep track of the current altitude, keep tracking the maximum altitude
+        # Use prefix_sum to keep track of the current altitude, keep tracking the maximum altitude
         for i in range(len(gain)):
             prefix_sum += gain[i]
             max_alt = max(max_alt, prefix_sum)

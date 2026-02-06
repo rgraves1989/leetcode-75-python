@@ -37,11 +37,12 @@ Constraints:
 
 """
 
+
 # Time complexity: O(N)
 # Space complexity: O(1)
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
-    	# Calculate total sum and initialize a prefix sum
+        # Calculate total sum and initialize a prefix sum
         total_sum, prefix_sum = sum(nums), 0
 
         # Loop through the array and calculate the post sum as we go

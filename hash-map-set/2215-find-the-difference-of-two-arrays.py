@@ -23,7 +23,6 @@ Example 2:
 	Explanation:
 		- For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], their value is only included once and answer[0] = [3].
 		- Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
- 
 
 Constraints:
 
@@ -32,15 +31,13 @@ Constraints:
 
 """
 
+
 # Time complexity: O(N + M)
 # Space complexity: O(N + M)
 class Solution:
     def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
-    	# Get the unique values from both nums1 and nums2
+        # Get the unique values from both nums1 and nums2
         uniqueNums1, uniqueNums2 = set(nums1), set(nums2)
 
         # Return the difference in sets
-        return [
-            list(uniqueNums1 - uniqueNums2),
-            list(uniqueNums2 - uniqueNums1)
-        ]
+        return [list(uniqueNums1 - uniqueNums2), list(uniqueNums2 - uniqueNums1)]

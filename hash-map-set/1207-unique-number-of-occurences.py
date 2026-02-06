@@ -19,13 +19,14 @@ Example 3:
 
 	Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
 	Output: true
- 
+
 Constraints:
 
 	- 1 <= arr.length <= 1000
 	- -1000 <= arr[i] <= 1000
 
 """
+
 
 # Time complexity: O(N)
 # Space complexity: O(N)
@@ -35,7 +36,7 @@ class Solution:
 
         # Loop through each index in the array
         for i in range(len(arr)):
-        	# Count the number of times we encounter the value
+            # Count the number of times we encounter the value
             val = arr[i]
             if val in counts.keys():
                 counts[val] += 1

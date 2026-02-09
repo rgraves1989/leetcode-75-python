@@ -38,8 +38,8 @@ Constraints:
 """
 
 
-# Time complexity: O()
-# Space complexity: O()
+# Time complexity: O(N)
+# Space complexity: O(N)
 class Solution:
     def removeStars(self, s: str) -> str:
         # Intialize our stack for tracking non-star characters

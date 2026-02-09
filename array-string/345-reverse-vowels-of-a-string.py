@@ -30,7 +30,7 @@ Constraints:
 class Solution:
     def reverseVowels(self, s: str) -> str:
         # Initialize vowel set, left and right pointers,
-        vowels = set("aeiouAEUIO")
+        vowels = set("aeiouAEIOU")
         left_ptr, right_ptr, reverse_vowels_str = 0, len(s) - 1, list(s)
 
         # Loop until the left pointer passes the right pointer

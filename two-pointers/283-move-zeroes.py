@@ -34,4 +34,4 @@ class Solution:
             # Always write non-zeroes numbers to the next write position, this causes all the zeroes to shift to the end
             if nums[read_ptr] != 0:
                 nums[write_ptr], nums[read_ptr] = nums[read_ptr], nums[write_ptr]
-                write += 1
+                write_ptr += 1

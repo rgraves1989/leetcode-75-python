@@ -68,7 +68,7 @@ class Solution:
 
         if not left_node and right_node:
             # No left node, meaning the deleted node was the head
-            head = rigth_node
+            head = right_node
         elif left_node and not right_node:
             # No right node, meaning the delete node was the tail
             left_node.next = None

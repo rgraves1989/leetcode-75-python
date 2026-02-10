@@ -39,7 +39,7 @@ Constraints:
 # Space complexity: O(N+M)
 class Solution:
     def decodeString(self, s: str) -> str:
-        # Intialize our stack, and both current number as well as string
+        # Intialize our stack, and both current number and current string
         stack, curr_num, curr_str = [], 0, ""
 
         # Loop through our encoded string, one character at a time

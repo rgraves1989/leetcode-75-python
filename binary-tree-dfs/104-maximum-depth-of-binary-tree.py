@@ -24,5 +24,28 @@ Constraints:
 """
 
 
-# Time complexity: O()
-# Space complexity: O()
+# Time complexity: O(N)
+# Space complexity: O(1)
+class Solution:
+    def dfs(self, root: Optional[TreeNode], current_depth: int):
+        current_depth += 1
+
+        # End of the line
+        if not root:
+            return 0
+
+        # DFS incrementing current_depth
+        if not root.left and not root.right:
+            return current_depth - 1
+        elif root.left and not root.right:
+            return self.dfs(root.left, current_depth)
+        elif not root.left and root.right:
+            return self.dfs(root.right, current_depth)
+        else:
+            return max(
+                self.dfs(root.left, current_depth), self.dfs(root.right, current_depth)
+            )
+
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        depth = 1
+        return self.dfs(root, depth)

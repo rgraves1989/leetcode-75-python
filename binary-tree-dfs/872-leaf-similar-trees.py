@@ -30,3 +30,25 @@ Constraints:
 
 # Time complexity: O(N + M)
 # Space complexity: O(N + M)
+class Solution:
+    def leafValueSequence(self, root: Optional[TreeNode]):
+        value_sequence = []
+
+        # End of the line
+        if not root:
+            return []
+
+        if not root.left and not root.right:
+            # Leaf
+            return [root.val]
+        if root.left:
+            # Add the left path value sequence
+            value_sequence += self.leafValueSequence(root.left)
+        if root.right:
+            # Add the right path value sequence
+            value_sequence += self.leafValueSequence(root.right)
+
+        return value_sequence
+
+    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+        return self.leafValueSequence(root1) == self.leafValueSequence(root2)
